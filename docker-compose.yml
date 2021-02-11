@@ -29,14 +29,14 @@ services:
     container_name: MONGODB
     image: 'mongo'
     environment: 
-      - MONGO_INITDB_DATABASE=your-database-name
-      - MONGO_INITDB_ROOT_USERNAME=your-username
-      - MONGO_INITDB_ROOT_PASSWORD=your-password
+      - MONGO_INITDB_DATABASE=myDB
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
     volumes:
       - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
       - ./mongo-volume:/data/db
     ports: 
-      - "27017:27017"
+      - "27017-27019:27017-27019"
     networks: 
       - mongonet
 
