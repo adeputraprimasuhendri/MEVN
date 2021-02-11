@@ -1,2 +1,2 @@
-# MEVN
-MongoDB, Express.js, VueJS, Node.js
+# MEVN + Docker
+MongoDB, Express.js, VueJS, Node.js + Docker
