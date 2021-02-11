@@ -1,30 +1,29 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">
-        MEVN
-      </h1>
-      <table class="table table-bordered">
+    <div class="mt-5">
+      <h1 class="mb-3 text-center text-md-left">
+            Bootstrap<span class="text-vue-green">Vue</span> Member</h1>
+      <table class="table">
         <tr>
           <th>Fullname</th>
           <th>Email</th>
           <th>Password</th>
-          <th>
-            <button class="btn btn-sm btn-primary" v-b-modal.modal-1>Add</button>
+          <th class="text-center">
+            <button class="btn btn-sm btn-info" v-b-modal.modal-1>Add Member</button>
           </th>
         </tr>
         <tr v-for="user in datauser">
           <td>{{user.fullname}}</td>
           <td>{{user.email}}</td>
-          <td>{{user.password}}</td>
-          <th><button class="btn btn-sm btn-danger" @click="deleteuser(user._id)">Del</button></th>
+          <td>********</td>
+          <th class="text-center"><button class="btn btn-sm btn-danger" @click="deleteuser(user._id)">Delete</button></th>
         </tr>
       </table>
-      <b-modal id="modal-1" title="Add User" hide-footer="true">
-        <b-form-input v-model="fullname" placeholder="Fullname"></b-form-input>
-        <b-form-input v-model="email" placeholder="Email"></b-form-input>
-        <b-form-input v-model="password" placeholder="Passowrd"></b-form-input>
-        <b-button variant="outline-primary" @click="adduser">Simpan</b-button>
+      <b-modal id="modal-1" title="Form Member BootstrapVue" hide-footer="true">
+        <b-form-input v-model="fullname" placeholder="Fullname" class="mb-2"></b-form-input>
+        <b-form-input v-model="email" placeholder="Email" class="mb-2"></b-form-input>
+        <b-form-input v-model="password" placeholder="Password" class="mb-2"></b-form-input>
+        <b-button variant="info" class="btn-block" @click="adduser">Save</b-button>
       </b-modal>
     </div>
   </div>
