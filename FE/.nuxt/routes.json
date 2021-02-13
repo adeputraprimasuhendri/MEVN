@@ -1,5 +1,12 @@
 [
   {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/adeputraprimasuhendri/Documents/MEVN/FE/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_460d7f6a"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/adeputraprimasuhendri/Documents/MEVN/FE/pages/index.vue",
