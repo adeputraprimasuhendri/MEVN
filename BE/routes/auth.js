@@ -14,7 +14,7 @@ router.post('/signup', async (req, res) => {
     try {
         const check = await Data.find({
             email: req.body.email
-        })
+        }).exec();
         if (check.length > 0) {
             res.json({
                 status: false,
