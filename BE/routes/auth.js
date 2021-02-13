@@ -14,8 +14,6 @@ router.post('/signup', async (req, res) => {
     try {
         const check = await Data.find({
             email: req.body.email
-        }, function (err, docs) {
-            console.log(err);
         });
         if (check.length > 0) {
             res.json({
