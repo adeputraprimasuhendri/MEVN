@@ -5,13 +5,13 @@ const BodyParser = require('body-parser');
 const cors = require('cors');
 
 //IMPORT ROUTES
-const MemberRoute  = require('./routes/member');
+const AuthRoute  = require('./routes/auth');
 require('dotenv').config();
 
 //MIDDLEWARE
 app.use(cors());
 app.use(BodyParser.json());
-app.use('/member', MemberRoute);
+app.use('/api/auth', AuthRoute);
 
 //ROUTE
 app.get('/', (req, res) => {
