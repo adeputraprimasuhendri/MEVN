@@ -45,13 +45,11 @@ export default function (ctx, inject) {
   "endpoints": {
     "login": {
       "url": "/api/auth/login",
-      "method": "post"
+      "method": "post",
+      "propertyName": "token"
     },
     "logout": false,
-    "user": {
-      "url": "/api/auth/user",
-      "method": "get"
-    }
+    "user": false
   },
   "name": "local"
 }))
