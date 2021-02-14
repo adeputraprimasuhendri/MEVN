@@ -3,14 +3,18 @@
     "name": "login",
     "path": "/login",
     "component": "/Users/adeputraprimasuhendri/Documents/MEVN/FE/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_460d7f6a"
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/adeputraprimasuhendri/Documents/MEVN/FE/pages/register.vue",
+    "chunkName": "pages/register"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/adeputraprimasuhendri/Documents/MEVN/FE/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_7c65dc53"
+    "chunkName": "pages/index"
   }
 ]

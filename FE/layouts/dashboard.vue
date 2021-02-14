@@ -20,6 +20,7 @@
 <script>
   const axios = require('axios');
   export default {
+    middleware: 'auth',
       methods: {
           async logout() {
             this.$auth.logout();
