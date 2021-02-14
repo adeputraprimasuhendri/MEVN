@@ -57,11 +57,14 @@
         methods: {
             async userLogin() {
                 await this.$auth.loginWith('local', {
-                        data: {
-                            email: this.email,
-                            password: this.password
-                        },
-                    });
+                    data: {
+                        email: this.email,
+                        password: this.password
+                    },
+                }).then(res => {
+                    console.log(res.data);
+                    this.$router.push("/")
+                });
             }
         }
     }
