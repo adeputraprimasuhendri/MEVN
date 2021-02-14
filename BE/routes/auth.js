@@ -1,10 +1,13 @@
 const express = require('express');
+
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
+const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const Data = require('../models/Member');
+const DB = require('../config/mongodb.js');
 var exp = process.env.JWT_EXP;
 var token = '';
 var secret = process.env.JWT_SECRET;
@@ -12,6 +15,7 @@ var secret = process.env.JWT_SECRET;
 // SIGN UP
 router.post('/signup', async (req, res) => {
     try {
+	await DB();
         const check = await Data.find({
             email: req.body.email
         });
@@ -58,6 +62,7 @@ router.post('/signup', async (req, res) => {
 // SIGN IN
 router.post('/login', async (req, res) => {
     try {
+	await DB();
         const data = await Data.findOne({
             email: req.body.email
         })
@@ -99,6 +104,7 @@ router.post('/login', async (req, res) => {
 // VERIFY TOKEN
 router.get('/user', async (req, res) => {
     try {
+	await DB();
         token = req.headers['authorization'].split(' ')
         var result = jwt.verify(token[1], secret);
         const data = await Data.findOne({
